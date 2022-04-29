@@ -159,7 +159,7 @@
       <div class="row">
         <div class="col-sm-4">
           <div class="date">{{date}}</div>
-          <a href="#" class="readmore">Read more</a>
+          <a href="#" class="readmore" onclick="loadData('news/{{id}}', '#content', '#details-template')">Read more</a>
         </div>
         
         <div class="col-sm-8">
@@ -185,30 +185,12 @@
     {{/each}}
   </script>
 
-
-
+  <script src="js/21880109.js"></script>
   <script>
     $(document).ready(function(){
       loadData('products', '#products', '#products-template');
       loadData('news', '#news', '#news-template');
-
     })
-
-    function loadData(request, targetId, sourceId){
-      $.ajax({
-        url: 'https://web1-api.herokuapp.com/api/' + request,
-        cache: false,
-        success: function(data){
-          let jsonData ={
-            data: data
-          };
-          let target = $(targetId);
-          let source = $(sourceId).html();
-          let template = Handlebars.compile(source);
-          $(target).html(template(jsonData));
-        }
-      });
-    }
   </script>
   
 </body>
