@@ -137,7 +137,7 @@ h4{
     font-weight: 400;
     color: #333333;
     font-size: 26px;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 a.readmore{
@@ -262,14 +262,6 @@ footer nav .active a{
     margin-left: -10px;
 }
 
-#category{
-    display: flex;
-}
-
-#category div, #category a{
-    padding-right: 15px;
-}
-
 /*blog*/
 .blog-img{
     height: 180px;
@@ -280,11 +272,21 @@ footer nav .active a{
 }
 
 .blog-list{
-    list-style-image: url(../images/marker1.png);
+    padding-left: 0;
+    list-style-type: none;
 }
 
 .blog-list li{
-    padding-bottom: 15px;
-    margin-left: -15px;
-    list-style-position: outside;
+    padding-bottom: 10px;
+    padding-left: 24px;
+    background: url(../images/marker1.png) 0 4px no-repeat;
+}
+
+.blog-list a{
+    color: #7c7c7c;
+    text-decoration: none;
+}
+
+.blog-list a:hover{
+    color: #73C926;
 }
